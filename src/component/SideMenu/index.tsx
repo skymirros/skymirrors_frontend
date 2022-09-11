@@ -9,7 +9,7 @@ const SubMenu = Menu.SubMenu;
 
 
 const SideMenu = (props: RouteConfigComponentProps) => {
-  console.log('props', props.route.routes)
+
   const rlocation = useLocation()
   const rhistory = useHistory()
   const [selectedKeys, setSelectedKeys] = useState(['overview'])
@@ -62,9 +62,8 @@ const SideMenu = (props: RouteConfigComponentProps) => {
           <MenuItem key='4_4'>资源下载</MenuItem>
         </SubMenu>
       </Menu>
-      <div>2</div>
-      {renderRoutes(props.route.routes)}
-    </div>
+      <div style={{ flexGrow: 2, height: '100%' }}>{renderRoutes(props.route.routes)}</div>
+    </div >
   );
 };
 
